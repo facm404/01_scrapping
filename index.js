@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer');
+ const puppeteer = require('puppeteer');
 
 (async () => {
 
@@ -40,7 +40,7 @@ const puppeteer = require('puppeteer');
 
     await page.goto('https://www.youtube.com/');
 
-    const elemento = await page.$x("//yt-formatted-string[contains(text(), 'Tendencias')]");
+    const elemento = await page.$x("//yt-formatted-string[contains(text(), 'Trending')]");
 
     if (elemento.length > 0) {
         await elemento[0].click();
